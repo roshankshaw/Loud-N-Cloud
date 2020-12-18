@@ -199,7 +199,7 @@ class Sidebar extends Component {
             </Collapse>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="http://www.bootstrapdash.com/demo/star-admin-free/react/documentation/documentation.html" rel="noopener noreferrer" target="_blank">
+            <a className="nav-link" href="/" rel="noopener noreferrer" target="_blank">
               <i className="mdi mdi-file-outline menu-icon"></i>
               <span className="menu-title"><Trans>Documentation</Trans></span>
             </a>
