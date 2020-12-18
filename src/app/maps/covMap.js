@@ -35,7 +35,7 @@ class RenderMap extends Component {
         var filter = await d3.select('#select input[name="gender"]:checked').node().value;
         //var filter = "MaleLiteracy"; // decides color
 
-        let data = await axios.get("http://instantinopaul.pythonanywhere.com/getCases").then(response => response.data).then(data => {
+        let data = await axios.get("https://sanjeevani-backend-v2.herokuapp.com/getCases").then(response => response.data).then(data => {
           return data;
         })
 
