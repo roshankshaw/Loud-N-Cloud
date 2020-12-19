@@ -111,14 +111,14 @@ class Sidebar extends Component {
               <span className="menu-title"><Trans>Dashboard 1</Trans></span>
             </Link>
           </li>
-          <li className={ this.isPathActive('/dashboard') ? 'nav-item active' : 'nav-item' }>
-            <Link className="nav-link" to="/dashboard">
+          <li className={ this.isPathActive('/dashboard2') ? 'nav-item active' : 'nav-item' }>
+            <Link className="nav-link" to="/dashboard2">
               <i className="mdi mdi-television menu-icon"></i>
               <span className="menu-title"><Trans>Dashboard 2</Trans></span>
             </Link>
           </li>
-          <li className={ this.isPathActive('/dashboard') ? 'nav-item active' : 'nav-item' }>
-            <Link className="nav-link" to="/dashboard">
+          <li className={ this.isPathActive('/dashboard3') ? 'nav-item active' : 'nav-item' }>
+            <Link className="nav-link" to="/dashboard3">
               <i className="mdi mdi-television menu-icon"></i>
               <span className="menu-title"><Trans>Dashboard 3</Trans></span>
             </Link>
@@ -211,7 +211,7 @@ class Sidebar extends Component {
             </Collapse>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="http://www.bootstrapdash.com/demo/star-admin-free/react/documentation/documentation.html" rel="noopener noreferrer" target="_blank">
+            <a className="nav-link" href="/" rel="noopener noreferrer" target="_blank">
               <i className="mdi mdi-file-outline menu-icon"></i>
               <span className="menu-title"><Trans>Documentation</Trans></span>
             </a>

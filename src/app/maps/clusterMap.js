@@ -1,14 +1,20 @@
 import * as d3 from 'd3';
 import React, { Component } from 'react';
 import * as topojson from 'topojson';
-import updateCases from './../services/update-district';
-import axios from 'axios';
+import updateCases from '../services/update-district';
+import updateCluster from '../services/update-cluster';
+import axios from 'axios'
 //import require from 'requirejs'
 
 
-class RenderMap extends Component {
+class ClusterRenderMap extends Component {
+
+    
 
   componentDidMount() {
+
+    var filter = "Literacy";
+    var cluster = "MaleLiteracy";
 
     // d3Q.queue()
     //   .defer(d3.json, "../data/IND_adm2_Literacy.json")
@@ -21,7 +27,6 @@ class RenderMap extends Component {
       .then(async function (files) {
         let topoMain = files[0];
         let topoKashmir = files[1];
-        console.log(topoMain)
         var districts;
         var disputed;
         // if (error) throw error;
@@ -31,75 +36,29 @@ class RenderMap extends Component {
         disputed = await topojson.feature(topoKashmir, topoKashmir.objects.ne_10m_admin_0_Kashmir_Occupied);
 
         // Radio HTML
-        await d3.select("#select").call(selectFilter());
-        var filter = await d3.select('#select input[name="gender"]:checked').node().value;
-        //var filter = "MaleLiteracy"; // decides color
-
+        //await d3.select("#select").call(selectFilter());
+        //var filter = await d3.select('#select input[name="gender"]:checked').node().value;
+        
         let data = await axios.get("https://sanjeevani-backend-v2.herokuapp.com/getCases").then(response => response.data).then(data => {
           return data;
         })
 
-        updateCases(districts, data);
+        // function to update cluster color and priority
+        updateCluster(districts, data);
 
         // Color codes for districts based on Literacy Rates
-        colorCode(districts.features, filter);
+        colorCode(districts.features);
         colorDisputed(disputed.features);
 
         // Map render
         var map = districtMap(districts, disputed).width(800).height(700).scale(1200).propTag(filter);
-        d3.select("#map")
-                .attr("class","container")
-                .call(map);
-
-
-        // On change of selection re-render
-        d3.selectAll("#select input[name=gender]").on("change", function () {
-          filter = d3.select('#select input[name="gender"]:checked').node().value;
-          colorCode(districts.features, filter);
-          map = districtMap(districts, disputed).width(800).height(700).scale(1200).propTag(filter);
-          d3.select("#map").call(map);
-        });
+        d3.select("#map").call(map);
       });
 
-    function selectFilter() {
-      function render(selection) {
-        selection.each(function () {
-          d3.select(this).html("<form>" +
-            "<input type='radio' name='gender' value='MaleLiteracy' checked> Active<br>" +
-            "<input type='radio' name='gender' value='Literacy'> Confirmed<br>" +
-            "<input type='radio' name='gender' value='FemaleLiteracy'> Recovered" +
-            "</form>");
-        });
-      } // render
-      return render;
-    }
-
-    function colorCode(data, filter) {
-      var colours;
-      if (filter === "Literacy") { // confirmed
-        colours = ["#E6E6FA", "#FF00FF", "#E6E6FA", "#8A2BE2", "#9400D3"];
-        var color = d3.scaleLinear()
-          .domain(d3.range(0, 1, 1.0 / (colours.length - 1)))
-          .range(colours);
-      }
-      else {
-        if (filter === "MaleLiteracy") { //active
-          colours = ["#FFF5F0", "#F87217", "#FFF5F0", "#FF2400", "#F70D1A"];
-        }
-        else if (filter === "FemaleLiteracy") { // recovered
-          colours = ["#FFFFE0", "#00FA9A", "#FFFFE0", "#008000", "#808000"];
-        }
-        var color = d3.scaleLinear()
-          .domain(d3.range(0, 1, 1.0 / (colours.length - 1)))
-          .range(colours);
-
-      }
+    function colorCode(data) {
       data.forEach(function (d) {
-        if (isNaN(d.properties[filter][0])) { d.properties[filter][0] = 0; }
-        d.color = color(d.properties[filter][0]);
+        d.color = d.properties[cluster];
       });
-
-
     }
 
     function colorDisputed(data) {
@@ -112,7 +71,7 @@ class RenderMap extends Component {
     function districtMap(districts, disputed) {
 
       var width = 800, height = 700, scale = 1200;
-      var valTag = 'Literacy', propTag = '', ttName = 'Vaccines required<br>(per million population)', unit = '';
+      var propTag = 'Cases', ttName = 'Priority', unit = '';
 
       function render(selection) {
         selection.each(function () {
@@ -142,22 +101,10 @@ class RenderMap extends Component {
               d3.select("#tooltip").transition()
                 .duration(200)
                 .style("opacity", .9);
-              var h1 = "<h3>" + (data.id) + "</h3><h4>(" + (data.properties.NAME_1) + ")</h4><table>" +
-                "<tr><td>" + ttName + "</td><td>" + (data.properties[valTag][1]) + unit + "</td></tr>";
-              var h2;
-              var h3 = "</tr>" +
-                "</table>";
-              if (propTag === "Literacy") {
-                h2 = "<tr><td> Confirmed Cases </td>" + "<td>" + data.properties[propTag][2] + "</td><td></td>";
-              }
-              else if (propTag === "MaleLiteracy") {
-                h2 = "<td> Active Cases </td>" + "<td>" + data.properties[propTag][1] + "</td><td></td>";
-              }
-              else if (propTag === "FemaleLiteracy") {
-                h2 = "<td> Recovered Cases </td>" + "<td>" + data.properties[propTag][1] + "</td><td></td>";
-              }
-              d3.select("#tooltip").html(h1 + h2 + h3)
-                .style("left", (d.pageX - document.getElementById('map').offsetLeft + 20 - document.getElementById('sidebar').offsetWidth) + "px")
+              d3.select("#tooltip").html("<h3>" + (data.id) + "</h3><h4>(" + (data.properties.NAME_1) + ")</h4><table>" +
+                "<tr><td>" + ttName + "</td><td>" + (data.properties[propTag]) + unit + "</td></tr>" +
+                "</table>")
+                .style("left", (d.pageX - document.getElementById('map').offsetLeft + 20-document.getElementById('sidebar').offsetWidth) + "px")
                 .style("top", (d.pageY - document.getElementById('map').offsetTop - 60) + "px");
             })
             .on("mouseout", function (d) {
@@ -226,4 +173,4 @@ class RenderMap extends Component {
 
 }
 
-export default RenderMap;
+export default ClusterRenderMap;
