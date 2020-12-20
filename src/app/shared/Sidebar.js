@@ -108,19 +108,25 @@ class Sidebar extends Component {
           <li className={ this.isPathActive('/dashboard') ? 'nav-item active' : 'nav-item' }>
             <Link className="nav-link" to="/dashboard">
               <i className="mdi mdi-television menu-icon"></i>
-              <span className="menu-title"><Trans>Dashboard 1</Trans></span>
-            </Link>
-          </li>
-          <li className={ this.isPathActive('/dashboard2') ? 'nav-item active' : 'nav-item' }>
-            <Link className="nav-link" to="/dashboard2">
-              <i className="mdi mdi-television menu-icon"></i>
-              <span className="menu-title"><Trans>Dashboard 2</Trans></span>
+              <span className="menu-title"><Trans>Vaccine Requirements</Trans></span>
             </Link>
           </li>
           <li className={ this.isPathActive('/dashboard3') ? 'nav-item active' : 'nav-item' }>
             <Link className="nav-link" to="/dashboard3">
               <i className="mdi mdi-television menu-icon"></i>
-              <span className="menu-title"><Trans>Dashboard 3</Trans></span>
+              <span className="menu-title"><Trans>Risk Assessment</Trans></span>
+            </Link>
+          </li>
+          <li className={ this.isPathActive('/dashboard2') ? 'nav-item active' : 'nav-item' }>
+            <Link className="nav-link" to="/dashboard2">
+              <i className="mdi mdi-television menu-icon"></i>
+              <span className="menu-title"><Trans>Filter by Choice</Trans></span>
+            </Link>
+          </li>
+          <li className={ this.isPathActive('/dashboard4') ? 'nav-item active' : 'nav-item' }>
+            <Link className="nav-link" to="/dashboard4">
+              <i className="mdi mdi-television menu-icon"></i>
+              <span className="menu-title"><Trans>General Statistics</Trans></span>
             </Link>
           </li>
           {/* <li className={ this.isPathActive('/basic-ui') ? 'nav-item active' : 'nav-item' }>

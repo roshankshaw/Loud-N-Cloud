@@ -1,7 +1,7 @@
 import * as d3 from 'd3';
 import React, { Component } from 'react';
 import * as topojson from 'topojson';
-import updateCases from './../services/update-district';
+import updateCases from './../services/update-cases';
 import axios from 'axios';
 //import require from 'requirejs'
 
@@ -142,8 +142,8 @@ class RenderMap extends Component {
               d3.select("#tooltip").transition()
                 .duration(200)
                 .style("opacity", .9);
-              var h1 = "<h3>" + (data.id) + "</h3><h4>(" + (data.properties.NAME_1) + ")</h4><table>" +
-                "<tr><td>" + ttName + "</td><td>" + (data.properties[valTag][1]) + unit + "</td></tr>";
+              var h1 = "<h3>" + (data.id) + "</h3><h4>(" + (data.properties.NAME_1) + ")</h4><table>"// +
+                //"<tr><td>" + ttName + "</td><td>" + (data.properties[valTag][1]) + unit + "</td></tr>";
               var h2;
               var h3 = "</tr>" +
                 "</table>";
