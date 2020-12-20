@@ -20,28 +20,28 @@ class Dashboard2 extends React.Component{
     this.renderDropdownButton=this.renderDropdownButton.bind(this);
   }
   handleClick (d){
-    let allNodes=d.target.parentElement.parentElement.querySelectorAll("li");
+    console.log(d);
+    let allNodes=d.target.parentElement.parentElement.querySelectorAll("a");
     allNodes.forEach((y)=>{y.classList.remove("active")});
     if (d.target.id=='Population'){
       this.setState({population:d.target.textContent.toLowerCase()});
-      d.target.parentElement.classList.add("active");
+      d.target.classList.add("active");
     }
     
     if (d.target.id=='Active Cases'){
       this.setState({active:d.target.textContent.toLowerCase()});
-      d.target.parentElement.classList.add("active")
+      d.target.classList.add("active")
     }
     
     if (d.target.id=='Risk Score'){
       this.setState({risk:d.target.textContent.toLowerCase()});
-      d.target.parentElement.classList.add("active")
+      d.target.classList.add("active")
     }
   }
   renderDropdownButton(title, i) {
     return (
       <DropdownButton
         as={ButtonGroup}
-        bsStyle={i.toLowerCase()}
         variant={i}
         title={title}
         key={i}
