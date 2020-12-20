@@ -9,9 +9,6 @@ const Dashboard3 = () => (
         <div className="col-md-4">
           <RenderMap />
         </div>
-        {/* <div className="col-md-8">
-          <SalesChart />
-        </div> */}
       </div>
       {/* <div className="row">
         <div className="col-md-6">
