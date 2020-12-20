@@ -9,7 +9,7 @@ function updateCluster(districts, data) {
             // priority considered color till columns corrected
             //console.log(lum);
 
-            let normRisk = data[districtId]['Normalized Log Risk'];
+            let normRisk = data[districtId]['Normalized_Log_Risk'];
             let clusterColor = "";
             if (normRisk >= 0.0 && normRisk < 0.2) {
                 clusterColor = "#63ff00";
@@ -30,9 +30,9 @@ function updateCluster(districts, data) {
             
             let hoverValues = {
                 pop : data[districtId].Population,
-                pred : data[districtId]['Active Cases Predicted'],
-                newPred : data[districtId]['New Active Cases Predicted'],
-                risk : data[districtId]['Normalized Log Risk']
+                pred : data[districtId]['Active_Cases_Predicted'],
+                newPred : data[districtId]['New_Active_Cases_Predicted'],
+                risk : data[districtId]['Normalized_Log_Risk']
 
             }
 
