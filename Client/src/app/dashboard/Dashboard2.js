@@ -20,21 +20,41 @@ class Dashboard2 extends React.Component{
     this.renderDropdownButton=this.renderDropdownButton.bind(this);
   }
   handleClick (d){
-    console.log(d);
     let allNodes=d.target.parentElement.parentElement.querySelectorAll("a");
     allNodes.forEach((y)=>{y.classList.remove("active")});
     if (d.target.id=='Population'){
-      this.setState({population:d.target.textContent.toLowerCase()});
+      if(d.target.textContent.toLowerCase()=='medium'){
+        let currentState=this.state;
+        delete currentState.population;
+        this.setState(currentState);
+      }
+      else{
+        this.setState({population:d.target.textContent.toLowerCase()});
+      }
       d.target.classList.add("active");
     }
     
     if (d.target.id=='Active Cases'){
-      this.setState({active:d.target.textContent.toLowerCase()});
+      if(d.target.textContent.toLowerCase()=='medium'){
+        let currentState=this.state;
+        delete currentState.active;
+        this.setState(currentState);
+      }
+      else{
+        this.setState({active:d.target.textContent.toLowerCase()});
+      }
       d.target.classList.add("active")
     }
     
     if (d.target.id=='Risk Score'){
-      this.setState({risk:d.target.textContent.toLowerCase()});
+      if(d.target.textContent.toLowerCase()=='medium'){
+        let currentState=this.state;
+        delete currentState.risk;
+        this.setState(currentState);
+      }
+      else{
+        this.setState({risk:d.target.textContent.toLowerCase()});
+      }
       d.target.classList.add("active")
     }
   }

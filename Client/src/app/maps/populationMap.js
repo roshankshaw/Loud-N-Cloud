@@ -47,18 +47,23 @@ class PopRenderMap extends Component {
         if(curstate.active=="low")
           apiparam= apiparam+ `'active':'asc',`;
         if(curstate.risk=="high")
-          apiparam= apiparam+ `'priority':'desc',`;
+          apiparam= apiparam+ `'Normalized Vaccination Priority':'desc',`;
         if(curstate.risk=='low')
-          apiparam= apiparam+ `'priority':'desc',`;
+          apiparam= apiparam+ `'Normalized Vaccination Priority':'desc',`;
         apiparam= apiparam+'}';
-        let api="https://sanjeevani-backend-v2.herokuapp.com/getSortedCols/"+apiparam;
-        let data = await axios.get(api).then(response => response.data).then(data => {
-          return data;
-        })
-        updateFilter(districts,data);
-        // Color codes for districts based on Literacy Rates
-        colorCode(districts.features);
-        colorDisputed(disputed.features);
+        if(apiparam=='{}'){
+          this.renderInitialMap();
+        }
+        else{
+          let api="https://project-manna-backend.herokuapp.com/getRowsSortByCol/"+apiparam;
+          let data = await axios.get(api).then(response => response.data).then(data => {
+            return data;
+          });
+          updateFilter(districts,data);
+          // Color codes for districts based on Literacy Rates
+          colorCode(districts.features);
+          colorDisputed(disputed.features);
+        }
 
         // Map render
         var map = districtMap(districts, disputed).width(800).height(700).scale(1200).propTag(filter);
@@ -170,7 +175,12 @@ class PopRenderMap extends Component {
     }
   }
   componentDidMount() {
+    this.renderInitialMap();
     
+
+  }
+  
+  renderInitialMap = () => {
     console.log(this.state);
     // d3Q.queue()
     //   .defer(d3.json, "../data/IND_adm2_Literacy.json")
@@ -335,7 +345,6 @@ class PopRenderMap extends Component {
 
       return render;
     }
-
   }
 
   render() {
