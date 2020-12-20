@@ -7,9 +7,6 @@ class Dashboard2 extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      population:"medium",
-      active:"medium",
-      risk:"medium"
     };
     this.BUTTONS=[
       {type:'primary',label:'Population'},
