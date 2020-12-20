@@ -39,7 +39,7 @@ class ClusterRenderMap extends Component {
         //await d3.select("#select").call(selectFilter());
         //var filter = await d3.select('#select input[name="gender"]:checked').node().value;
         
-        let data = await axios.get("https://sanjeevani-backend-v2.herokuapp.com/getCases").then(response => response.data).then(data => {
+        let data = await axios.get("https://project-manna-backend.herokuapp.com/getRows").then(response => response.data).then(data => {
           return data;
         })
 
@@ -102,7 +102,10 @@ class ClusterRenderMap extends Component {
                 .duration(200)
                 .style("opacity", .9);
               d3.select("#tooltip").html("<h3>" + (data.id) + "</h3><h4>(" + (data.properties.NAME_1) + ")</h4><table>" +
-                "<tr><td>" + ttName + "</td><td>" + (data.properties[propTag]) + unit + "</td></tr>" +
+                "<tr><td>" + "Population" + "</td><td>" + (data.properties[propTag].pop) + unit + "</td></tr>" +
+                "<tr><td>" + "Predicted cases" + "</td><td>" + (data.properties[propTag].pred) + unit + "</td></tr>" +
+                "<tr><td>" + "New Predicted cases" + "</td><td>" + (data.properties[propTag].newPred) + unit + "</td></tr>" +
+                "<tr><td>" + "Risk" + "</td><td>" + (data.properties[propTag].risk) + unit + "</td></tr>" +
                 "</table>")
                 .style("left", (d.pageX - document.getElementById('map').offsetLeft + 20-document.getElementById('sidebar').offsetWidth) + "px")
                 .style("top", (d.pageY - document.getElementById('map').offsetTop - 60) + "px");
