@@ -37,7 +37,7 @@ class PopRenderMap extends Component {
         // await d3.select("#select").call(selectFilter());
         // var filter = await d3.select('#select input[name="gender"]:checked').node().value;
         var filter= "Literacy";
-        let curstate=newProps.state;
+        let curstate=newProps.state.currentState;
         console.log(curstate);
         let apiparam="{";
         for (let key of Object.keys(curstate)) {

@@ -3,11 +3,11 @@ import { DropdownButton,Dropdown,ButtonGroup } from 'react-bootstrap';
 import RenderMap from './../maps/populationMap';
 import './../../assets/css/literacyMap.css';
 
+const initialState={currentState:{}};
 class Dashboard2 extends React.Component{
   constructor(props) {
     super(props);
-    this.state = {
-    };
+    this.state =initialState;
     this.BUTTONS=[
       {type:'success',label:'Risk Score'},
       {type:'danger',label:'Active Cases'},
@@ -17,8 +17,19 @@ class Dashboard2 extends React.Component{
     this.renderDropdownButton=this.renderDropdownButton.bind(this);
   }
   handleClick (d){
-    let allNodes=d.target.parentElement.parentElement.querySelectorAll("a");
-    allNodes.forEach((y)=>{y.classList.remove("active")});
+    this.state=initialState;
+    this.forceUpdate();
+    let allNodes=d.target.parentElement.parentElement.parentElement.querySelectorAll("a");
+    allNodes.forEach((y,index)=>
+    {
+      y.classList.remove("active");
+      if(index%3==0)
+      {
+        y.classList.add("active")
+      }
+    });
+    let allNodesInDropdown=d.target.parentElement.parentElement.querySelectorAll("a");
+    allNodesInDropdown.forEach((y)=>{y.classList.remove("active")});
     if (d.target.id=='Population'){
       if(d.target.textContent.toLowerCase()=='medium'){
         let currentState=this.state;
@@ -26,7 +37,7 @@ class Dashboard2 extends React.Component{
         this.setState(currentState);
       }
       else{
-        this.setState({population:d.target.textContent.toLowerCase()});
+        this.setState({currentState:{population:d.target.textContent.toLowerCase()}});
       }
       d.target.classList.add("active");
     }
@@ -38,7 +49,7 @@ class Dashboard2 extends React.Component{
         this.setState(currentState);
       }
       else{
-        this.setState({active:d.target.textContent.toLowerCase()});
+        this.setState({currentState:{active:d.target.textContent.toLowerCase()}});
       }
       d.target.classList.add("active")
     }
@@ -50,7 +61,7 @@ class Dashboard2 extends React.Component{
         this.setState(currentState);
       }
       else{
-        this.setState({risk:d.target.textContent.toLowerCase()});
+        this.setState({currentState:{risk:d.target.textContent.toLowerCase()}});
       }
       d.target.classList.add("active")
     }
