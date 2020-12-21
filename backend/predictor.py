@@ -3,7 +3,7 @@
 
 # ## Imports
 
-# In[1]:
+# In[5]:
 
 
 import pandas as pd, requests
@@ -339,7 +339,7 @@ finalDf.to_excel('data/intermediate.xlsx')
 
 # ## Color Logic
 
-# In[3]:
+# In[6]:
 
 
 def getcolor(value):
@@ -351,7 +351,7 @@ def getcolor(value):
 
 # ## Risk Estimation
 
-# In[14]:
+# In[8]:
 
 
 finalDf=pd.read_excel('data/intermediate.xlsx')
@@ -376,7 +376,7 @@ finalDf['vaccinated']=0
 finalDf['Relative Vaccination Priority'] = finalDf['Normalized Vaccination Priority'] / finalDf['Normalized Vaccination Priority'].sum()
 
 
-# In[15]:
+# In[3]:
 
 
 # binaryColumns=[
@@ -404,7 +404,7 @@ finalDf['Relative Vaccination Priority'] = finalDf['Normalized Vaccination Prior
 #     finalDf[f'Binary {col}']=(finalDf[col] > mean).astype(int)
 
 
-# In[16]:
+# In[9]:
 
 
 finalDf.columns = list(map(lambda x : x.replace(' ', '_'), finalDf.columns))
@@ -413,7 +413,7 @@ finalDf.to_excel('data/results.xlsx', index=False)
 
 # ## Storing results into database
 
-# In[17]:
+# In[10]:
 
 
 if not os.path.isdir('database'):
