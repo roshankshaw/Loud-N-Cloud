@@ -3,7 +3,7 @@ from flask import jsonify,after_this_request,make_response
 import json, ast
 import sqlquery as query
 from flask_cors import CORS, cross_origin
-import pandas as pd
+# import pandas as pd
 app = Flask(__name__)
 CORS(app)
 app.config['JSON_SORT_KEYS'] = False
@@ -48,22 +48,22 @@ def getCount():
     print(res)
     return jsonify(res)
 
-@app.route('/getFilteredColumns/<column_json>',methods=['GET'])
-def getFilteredColumns(column_json):
-    column_dict={}
-    try:
-        column_dict=ast.literal_eval(column_json)
-    except BaseException as e:
-        print(f'{column_json}>>>>>>>>>>>>>>>>>>>{e}')
+# @app.route('/getFilteredColumns/<column_json>',methods=['GET'])
+# def getFilteredColumns(column_json):
+#     column_dict={}
+#     try:
+#         column_dict=ast.literal_eval(column_json)
+#     except BaseException as e:
+#         print(f'{column_json}>>>>>>>>>>>>>>>>>>>{e}')
     
-    all_rows, column_names=query.getRows('./database/results.db')
-    df=pd.DataFrame(all_rows, columns=column_names)
-    for col, val in column_dict.items():
-    	df=df[df[f'Binary_{col}']==val]
-    res={r['detecteddistrict']:r for r in df.to_dict('records')}
-    for i, r in enumerate(res):
-    	res[r]['index']=i+1
-    return jsonify(res)
+#     all_rows, column_names=query.getCount('./database/results.db')
+#     df=pd.DataFrame(all_rows, columns=column_names)
+#     for col, val in column_dict.items():
+#     	df=df[df[f'Binary_{col}']==val]
+#     res={r['detecteddistrict']:r for r in df.to_dict('records')}
+#     for i, r in enumerate(res):
+#     	res[r]['index']=i+1
+#     return jsonify(res)
 
 @app.route('/')
 def hello_name():

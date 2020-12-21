@@ -25,11 +25,11 @@ def getCols(db_path):
 	c.close()
 	return column_names
 
-def getCount(db_path):
-    conn = sqlite3.connect(db_path) #change path here
-    c = conn.cursor()
-    c.execute(f'''select confirmed, recovered, deceased from main;''')
-    rows=c.fetchall()
-    column_names=['confirmed', 'recovered', 'deceased']
-    c.close()
-    return rows, column_names
+# def getCount(db_path):
+#     conn = sqlite3.connect(db_path) #change path here
+#     c = conn.cursor()
+#     c.execute(f'''select confirmed, recovered, deceased from main;''')
+#     rows=c.fetchall()
+#     column_names=['confirmed', 'recovered', 'deceased']
+#     c.close()
+#     return rows, column_names
