@@ -43,6 +43,15 @@
         "code",
         "content"
       ]
+    },
+    {
+      "login": "sayan1999",
+      "name": "Sayan Dey",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/42580224?v=4",
+      "profile": "https://sayan1999.github.io/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
