@@ -40,27 +40,27 @@ class PopRenderMap extends Component {
         let curstate=newProps.state;
         console.log(curstate);
         let apiparam="{";
-        for (var key of Object.keys(curstate)) {
+        for (let key of Object.keys(curstate)) {
           if(key=='population'&&curstate.population=="high")
-            apiparam= apiparam+ `'Population':'desc',`;
-          if(key=='population'&&curstate.population=="low")
-            apiparam= apiparam+ `'Population':'asc',`;
-          if(key=='active'&&curstate.active=="high")
-            apiparam= apiparam+ `'active':'desc',`;
-          if(key=='active'&&curstate.active=="low")
-            apiparam= apiparam+ `'active':'asc',`;
-          if(key=='risk'&&curstate.risk=="high")
-            apiparam= apiparam+ `'Normalized Vaccination Priority':'desc',`;
-          if(key=='risk'&&curstate.risk=='low')
-            apiparam= apiparam+ `'Normalized Vaccination Priority':'desc',`;   
+            apiparam= apiparam+ `'Population':'descend',`;
+          else if(key=='population'&&curstate.population=="low")
+            apiparam= apiparam+ `'Population':'ascend',`;
+          else if(key=='active'&&curstate.active=="high")
+            apiparam= apiparam+ `'active':'descend',`;
+          else if(key=='active'&&curstate.active=="low")
+            apiparam= apiparam+ `'active':'ascend',`;
+          else if(key=='risk'&&curstate.risk=="high")
+            apiparam= apiparam+ `'Normalized_Vaccination_Priority':'descend',`;
+          else if(key=='risk'&&curstate.risk=='low')
+            apiparam= apiparam+ `'Normalized_Vaccination_Priority':'ascend',`;   
         }
         apiparam= apiparam+'}';
-        console.log(apiparam);
         if(apiparam=='{}'){
           this.renderInitialMap();
         }
         else{
           let api="https://project-manna-backend.herokuapp.com/getRowsSortByCol/"+apiparam;
+          console.log(api);
           let data = await axios.get(api).then(response => response.data).then(data => {
             return data;
           });
@@ -77,62 +77,6 @@ class PopRenderMap extends Component {
                 .call(map);
         
     }
-    // Promise.all([
-    //   d3.json("https://raw.githubusercontent.com/akshat-khare/datavisproject/master/IND_adm2_Literacy.json"),
-    //   d3.json("https://raw.githubusercontent.com/akshat-khare/datavisproject/master/ne_10m_admin_0_Kashmir_Occupied.json")
-    // ])
-    //   .then(async function (files) {
-    //     let topoMain = files[0];
-    //     let topoKashmir = files[1];
-    //     var districts;
-    //     var disputed;
-    //     // if (error) throw error;
-
-    //     // Features for districts and disputed areas
-    //     districts = await topojson.feature(topoMain, topoMain.objects.IND_adm2);
-    //     disputed = await topojson.feature(topoKashmir, topoKashmir.objects.ne_10m_admin_0_Kashmir_Occupied);
-
-    //     // Radio HTML
-    //     // await d3.select("#select").call(selectFilter());
-    //     // var filter = await d3.select('#select input[name="gender"]:checked').node().value;
-    //     var filter= "Literacy";
-    //     let curstate=newProps.state;
-    //     console.log(curstate);
-    //     let apiparam="{";
-    //     if(curstate.population=="high")
-    //       apiparam= apiparam+ `'Population':'desc',`;
-    //     if(curstate.population=="low")
-    //       apiparam= apiparam+ `'Population':'asc',`;
-    //     if(curstate.active=="high")
-    //       apiparam= apiparam+ `'active':'desc',`;
-    //     if(curstate.active=="low")
-    //       apiparam= apiparam+ `'active':'asc',`;
-    //     if(curstate.risk=="high")
-    //       apiparam= apiparam+ `'Normalized Vaccination Priority':'desc',`;
-    //     if(curstate.risk=='low')
-    //       apiparam= apiparam+ `'Normalized Vaccination Priority':'desc',`;
-    //     apiparam= apiparam+'}';
-    //     if(apiparam=='{}'){
-    //       this.renderInitialMap();
-    //     }
-    //     else{
-    //       let api="https://project-manna-backend.herokuapp.com/getRowsSortByCol/"+apiparam;
-    //       let data = await axios.get(api).then(response => response.data).then(data => {
-    //         return data;
-    //       });
-    //       updateFilter(districts,data);
-    //       // Color codes for districts based on Literacy Rates
-    //       colorCode(districts.features);
-    //       colorDisputed(disputed.features);
-    //     }
-
-    //     // Map render
-    //     var map = districtMap(districts, disputed).width(800).height(700).scale(1200).propTag(filter);
-    //     d3.select("#map")
-    //             .attr("class","container")
-    //             .call(map);
-        
-    //   });
       function colorCode(data) {
         data.forEach(function (d) {
           d.color = d.properties['MaleLiteracy'];

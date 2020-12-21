@@ -17,7 +17,7 @@ function updateFilter(districts, data) {
             else{
                 clusterColor = "#F1F3DE";
             }    
-            priority = 1 + data[districtId].priority;
+            priority = 1 + data[districtId].Normalized_Vaccination_Priority;
             // literacy and maleliteracy considered as priority and color
             literacy.Literacy = priority;
             literacy.MaleLiteracy = clusterColor;

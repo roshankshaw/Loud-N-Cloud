@@ -9,9 +9,9 @@ class Dashboard2 extends React.Component{
     this.state = {
     };
     this.BUTTONS=[
-      {type:'primary',label:'Population'},
-      {type:'danger',label:'Active Cases'},
       {type:'success',label:'Risk Score'},
+      {type:'danger',label:'Active Cases'},
+      {type:'primary',label:'Population'},
     ];
     this.handleClick=this.handleClick.bind(this);
     this.renderDropdownButton=this.renderDropdownButton.bind(this);
