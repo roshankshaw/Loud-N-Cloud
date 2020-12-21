@@ -4,14 +4,15 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # project-manna
-Submitted at InOut 2020. This project has been deployed on heroku, and can be accessed from this link. [project-manna](https://project-manna.herokuapp.com/)
+Submitted at InOut 2020. This project has been deployed on heroku, and can be accessed from the link below. \
+[project-manna](https://project-manna.herokuapp.com/)
 
 ## Motivation
 Vaccine for Covid-19 has been developed in record time. Now, the next big challenge is a logistical one, manufacturing vaccine at scale and mass innoculation. It will be some time before everyone is vaccinated. So we need to make the best out of the limited supply we will be getting initially. By predicting vunerable demographics beforehand, we can vaccinate these people on a priority basis to decrease fatality rate.
 
 ## How our model works
 We have collected the data from covid19india.org, who are doing an awesome job at crowdsourcing the data!
-![backend](https://cdn.discordapp.com/attachments/772028017047764996/790485882834518056/Inout.png)
+![backend](https://cdn.discordapp.com/attachments/772028017047764996/790485882834518056/Inout.png) \ \
 The SIR model we devised was inspired from this project [infectious_disease_modelling](https://github.com/henrifroese/infectious_disease_modelling)
 We have used the star admin react template for our dashboard.
 
