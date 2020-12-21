@@ -2,7 +2,7 @@ function updateFilter(districts, data) {
 
     let district = districts.features;
     let numClusters = 4;
-    let top=100,itr=0;
+    let top=120,itr=0;
     for (let i = 0; i < district.length; i++) {
         let literacy = district[i].properties;
         let districtId = (district[i].id).toLowerCase();
@@ -17,7 +17,7 @@ function updateFilter(districts, data) {
             else{
                 clusterColor = "#F1F3DE";
             }    
-            priority = 1 + data[districtId].priority;
+            priority = 1 + data[districtId].Normalized_Vaccination_Priority;
             // literacy and maleliteracy considered as priority and color
             literacy.Literacy = priority;
             literacy.MaleLiteracy = clusterColor;
