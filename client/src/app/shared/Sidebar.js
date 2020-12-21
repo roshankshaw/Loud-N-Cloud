@@ -54,11 +54,11 @@ class Sidebar extends Component {
       <nav className="sidebar sidebar-offcanvas" id="sidebar">
         <div className="text-center sidebar-brand-wrapper d-flex align-items-center">
           <a className="sidebar-brand brand-logo" href="index.html">
-            <img src={require("../../assets/images/logo.svg")} alt="logo" />
+            <img src={require("../../assets/images/project-manna.png")} alt="logo" />
           </a>
           <a className="sidebar-brand brand-logo-mini pt-3" href="index.html">
             <img
-              src={require("../../assets/images/logo-mini.svg")}
+              src={require("../../assets/images/project-manna.png")}
               alt="logo"
             />
           </a>
@@ -67,22 +67,6 @@ class Sidebar extends Component {
           <li className="nav-item nav-profile not-navigation-link">
             <div className="nav-link">
               <Dropdown>
-                <Dropdown.Toggle className="nav-link user-switch-dropdown-toggler p-0 toggle-arrow-hide bg-transparent border-0 w-100">
-                  <div className="d-flex justify-content-between align-items-start">
-                    <div className="profile-image">
-                      <img
-                        className="img-xs rounded-circle"
-                        src={require("../../assets/images/faces/face8.jpg")}
-                        alt="profile"
-                      />
-                      <div className="dot-indicator bg-success"></div>
-                    </div>
-                    <div className="text-wrapper">
-                      <p className="profile-name">Allen Moreno</p>
-                      <p className="designation">Premium user</p>
-                    </div>
-                  </div>
-                </Dropdown.Toggle>
                 <Dropdown.Menu className="preview-list navbar-dropdown">
                   <Dropdown.Item
                     className="dropdown-item p-0 preview-item d-flex align-items-center"
