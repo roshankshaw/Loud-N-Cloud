@@ -10,7 +10,7 @@ const Dashboard3 = () => (
         <div className="col-md-4">
           <RenderMap />
         </div>
-        <div className="col-md-4">
+        <div className="col-md-20">
             <img src={mapKey}/>
         </div>
       </div>
