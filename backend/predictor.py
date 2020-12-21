@@ -18,10 +18,10 @@ import matplotlib.pyplot as plt
 plt.style.use('dark_background')
 
 import matplotlib.dates as mdates
-get_ipython().run_line_magic('matplotlib', 'inline')
+# %matplotlib inline 
 
 import mpld3
-mpld3.enable_notebook()
+# mpld3.enable_notebook()
 
 from scipy.integrate import odeint
 import lmfit
