@@ -8,18 +8,43 @@ function updateCluster(districts, data) {
         if (data[districtId] !== undefined) {
             // priority considered color till columns corrected
             //console.log(lum);
-            let clusterColor = data[districtId].color;
-            let priority = 1 + data[districtId].priority;
+
+            let normRisk = data[districtId]['Normalized_Log_Risk'];
+            let clusterColor = "";
+            if (normRisk >= 0.0 && normRisk < 0.2) {
+                clusterColor = "#63ff00";
+            }
+            else if (normRisk >= 0.2 && normRisk < 0.4) {
+                clusterColor = "#d6ff00";
+            }
+            else if (normRisk >= 0.4 && normRisk < 0.6) {
+                clusterColor = "#ffff00";
+            }
+            else if (normRisk >= 0.6 && normRisk < 0.8) {
+                clusterColor = "#ffc100";
+            }
+            else {
+                clusterColor = "#ff0000";
+            }
+
+            
+            let hoverValues = {
+                pop : data[districtId].Population,
+                pred : data[districtId]['Active_Cases_Predicted'],
+                newPred : data[districtId]['New_Active_Cases_Predicted'],
+                risk : data[districtId]['Normalized_Log_Risk']
+
+            }
 
             // literacy and maleliteracy considered as priority and color
-            literacy.Literacy = priority;
+            literacy.Literacy = hoverValues;
             literacy.MaleLiteracy = clusterColor;
         }
         else {
 
             // literacy and maleliteracy considered as priority and color
             literacy.Literacy = "NA";
-            literacy.MaleLiteracy = "#EAEAFA";
+            literacy.MaleLiteracy = "#63ff00";
         }
     }
 
