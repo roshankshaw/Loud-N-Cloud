@@ -22,8 +22,6 @@
 
 // export class Dashboard extends Component {
 
-
-
 //   constructor(props) {
 //     super(props);
 //     this.state = {
@@ -41,7 +39,7 @@
 //           yAxes: [{
 //             display: false
 //           }],
-//           xAxes: [{ 
+//           xAxes: [{
 //             display: false
 //           }]
 //         },
@@ -217,11 +215,11 @@
 //     this.statusChangedHandler = this.statusChangedHandler.bind(this);
 //     this.addTodo = this.addTodo.bind(this);
 //     this.removeTodo = this.removeTodo.bind(this);
-//     this.inputChangeHandler = this.inputChangeHandler.bind(this); 
+//     this.inputChangeHandler = this.inputChangeHandler.bind(this);
 //   }
 //   changeChartOneData = (e) =>{
 //     const clicked = e.target.id
-//     if(this.state.active === clicked) { 
+//     if(this.state.active === clicked) {
 //         this.setState({active: ''});
 //     } else {
 //         this.setState({active: clicked})
@@ -241,7 +239,7 @@
 
 //     newDataSet.data = newData;
 //     newDataSet1.data = newData1;
-    
+
 //     // console.log('this is:', oldDataSet.data);
 //     var newState = {
 //       // ...data,
@@ -257,7 +255,7 @@
 //   }
 //   changeChartTwoData = (e) =>{
 //     const clicked = e.target.id
-//     if(this.state.active === clicked) { 
+//     if(this.state.active === clicked) {
 //         this.setState({active: ''});
 //     } else {
 //         this.setState({active: clicked})
@@ -276,7 +274,7 @@
 
 //     newDataSet.data = newData;
 //     newDataSet1.data = newData1;
-    
+
 //     // console.log('this is:', oldDataSet.data);
 //     console.log('this is:', newDataSet.data);
 //     console.log('this is:', newDataSet1.data);
@@ -294,7 +292,7 @@
 //   }
 //   changeChartThreeData = (e) =>{
 //     const clicked = e.target.id
-//     if(this.state.active === clicked) { 
+//     if(this.state.active === clicked) {
 //         this.setState({active: ''});
 //     } else {
 //         this.setState({active: clicked})
@@ -313,7 +311,7 @@
 
 //     newDataSet.data = newData;
 //     newDataSet1.data = newData1;
-    
+
 //     // console.log('this is:', oldDataSet.data);
 //     console.log('this is:', newDataSet.data);
 //     console.log('this is:', newDataSet1.data);
@@ -331,7 +329,7 @@
 //   }
 //   changeChartFourData = (e) =>{
 //     const clicked = e.target.id
-//     if(this.state.active === clicked) { 
+//     if(this.state.active === clicked) {
 //         this.setState({active: ''});
 //     } else {
 //         this.setState({active: clicked})
@@ -350,7 +348,7 @@
 
 //     newDataSet.data = newData;
 //     newDataSet1.data = newData1;
-    
+
 //     // console.log('this is:', oldDataSet.data);
 //     console.log('this is:', newDataSet.data);
 //     console.log('this is:', newDataSet1.data);
@@ -386,7 +384,7 @@
 //           id: todos.length ? todos[todos.length - 1].id + 1 : 1,
 //           task: this.state.inputValue,
 //           isCompleted: false
-          
+
 //       })
 
 //       this.setState({
@@ -537,7 +535,7 @@
 //     },
 //     stepsize: 100
 //   };
-  
+
 //   realTimeStatisticsData= {
 //     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
 //     datasets: [{
@@ -598,7 +596,6 @@
 //       }
 //     }
 //   };
-    
 
 //   marketingOverviewData= {
 //     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
@@ -720,8 +717,6 @@
 //     gradientBar7.addColorStop(1, '#fa3252')
 //     gradientBar7.addColorStop(0, '#fa5539')
 
-    
-
 //     const visitData = {
 //       labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10", "Day 11", "Day 12", "Day 13"],
 //       datasets: [{
@@ -766,15 +761,9 @@
 //         fill: true
 //       }]
 //     };
-  
 
 //     var Datas = [60, 75, 65, 130, 130, 145, 110, 145, 155, 149, 170];
 //     var Datas1 = [0, 25, 20, 40, 70, 52, 49, 90, 70, 94, 110, 135];
-
-
-
-
-  
 
 //     const salesStatisticsData = {
 //       labels: ["Jan 1", "Jan 7", "Jan 14", "Jan 21", "Jan 28", "Feb 4", "Feb 11", "Feb 18"],
@@ -796,8 +785,6 @@
 //     };
 
 //     this.setState(salesStatisticsData);
-
-
 
 //     const netProfitData = {
 //       labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
@@ -1032,7 +1019,7 @@
 //                   </div>
 //                   </div>
 //                 </div>
-//                 <Line data={this.state} options={this.state.salesStaticsOptions}  datasetKeyProvider={this.datasetKeyProvider} height={50} width={100} id="salesStatisticsChart" />               
+//                 <Line data={this.state} options={this.state.salesStaticsOptions}  datasetKeyProvider={this.datasetKeyProvider} height={50} width={100} id="salesStatisticsChart" />
 //               </div>
 //             </div>
 //           </div>
@@ -1496,16 +1483,16 @@
 //             </div>
 //           </div>
 //         </div>
-        
-//       </div> 
+
+//       </div>
 //     );
 //   }
 // }
 // export default Dashboard;
 
-import React from 'react';
-import RenderMap from './../maps/covMap';
-import './../../assets/css/literacyMap.css';
+import React from "react";
+import RenderMap from "./../maps/covMap";
+import "./../../assets/css/literacyMap.css";
 
 const Dashboard = () => (
   <div className="content">
@@ -1526,7 +1513,6 @@ const Dashboard = () => (
           <Tasks />
         </div>
       </div> */}
-
     </div>
   </div>
 );

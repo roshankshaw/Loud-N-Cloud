@@ -3,9 +3,8 @@
 /* === Plugin styles === */
 
 @import "~react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
-@import '~@fullcalendar/core/main.css';
-@import '~@fullcalendar/daygrid/main.css';
-
+@import "~@fullcalendar/core/main.css";
+@import "~@fullcalendar/daygrid/main.css";
 
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
@@ -21,7 +20,6 @@
 @import "~@mdi/font/scss/materialdesignicons";
 @import "~flag-icon-css/sass/flag-icon";
 
-
 /* === Template mixins === */
 @import "../assets/styles/mixins/animation";
 @import "../assets/styles/mixins/badges";
@@ -33,7 +31,6 @@
 @import "../assets/styles/mixins/popovers";
 @import "../assets/styles/mixins/tooltips";
 @import "../assets/styles/mixins/no-ui-slider";
-
 
 /* === Core Styles === */
 @import "../assets/styles/background";

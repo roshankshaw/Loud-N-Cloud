@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export class Spinner extends Component {
   render() {
@@ -8,8 +8,8 @@ export class Spinner extends Component {
           <div className="donut"></div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Spinner
+export default Spinner;

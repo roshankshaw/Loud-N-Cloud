@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { ProgressBar } from 'react-bootstrap';
+import React, { Component } from "react";
+import { ProgressBar } from "react-bootstrap";
 
 export class BasicTable extends Component {
   render() {
@@ -9,8 +9,14 @@ export class BasicTable extends Component {
           <h3 className="page-title"> Basic Tables </h3>
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb">
-              <li className="breadcrumb-item"><a href="!#" onClick={event => event.preventDefault()}>Tables</a></li>
-              <li className="breadcrumb-item active" aria-current="page">Basic tables</li>
+              <li className="breadcrumb-item">
+                <a href="!#" onClick={(event) => event.preventDefault()}>
+                  Tables
+                </a>
+              </li>
+              <li className="breadcrumb-item active" aria-current="page">
+                Basic tables
+              </li>
             </ol>
           </nav>
         </div>
@@ -19,7 +25,9 @@ export class BasicTable extends Component {
             <div className="card">
               <div className="card-body">
                 <h4 className="card-title">Basic Table</h4>
-                <p className="card-description"> Add className <code>.table</code>
+                <p className="card-description">
+                  {" "}
+                  Add className <code>.table</code>
                 </p>
                 <div className="table-responsive">
                   <table className="table">
@@ -36,31 +44,47 @@ export class BasicTable extends Component {
                         <td>Jacob</td>
                         <td>53275531</td>
                         <td>12 May 2017</td>
-                        <td><label className="badge badge-danger">Pending</label></td>
+                        <td>
+                          <label className="badge badge-danger">Pending</label>
+                        </td>
                       </tr>
                       <tr>
                         <td>Messsy</td>
                         <td>53275532</td>
                         <td>15 May 2017</td>
-                        <td><label className="badge badge-warning">In progress</label></td>
+                        <td>
+                          <label className="badge badge-warning">
+                            In progress
+                          </label>
+                        </td>
                       </tr>
                       <tr>
                         <td>John</td>
                         <td>53275533</td>
                         <td>14 May 2017</td>
-                        <td><label className="badge badge-info">Fixed</label></td>
+                        <td>
+                          <label className="badge badge-info">Fixed</label>
+                        </td>
                       </tr>
                       <tr>
                         <td>Peter</td>
                         <td>53275534</td>
                         <td>16 May 2017</td>
-                        <td><label className="badge badge-success">Completed</label></td>
+                        <td>
+                          <label className="badge badge-success">
+                            Completed
+                          </label>
+                        </td>
                       </tr>
                       <tr>
                         <td>Dave</td>
                         <td>53275535</td>
                         <td>20 May 2017</td>
-                        <td><label className="badge badge-warning">In progress</label></td>
+                        <td>
+                          <label className="badge badge-warning">
+                            In progress
+                          </label>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -72,7 +96,9 @@ export class BasicTable extends Component {
             <div className="card">
               <div className="card-body">
                 <h4 className="card-title">Hoverable Table</h4>
-                <p className="card-description"> Add className <code>.table-hover</code>
+                <p className="card-description">
+                  {" "}
+                  Add className <code>.table-hover</code>
                 </p>
                 <div className="table-responsive">
                   <table className="table table-hover">
@@ -88,32 +114,63 @@ export class BasicTable extends Component {
                       <tr>
                         <td>Jacob</td>
                         <td>Photoshop</td>
-                        <td className="text-danger"> 28.76% <i className="mdi mdi-arrow-down"></i></td>
-                        <td><label className="badge badge-danger">Pending</label></td>
+                        <td className="text-danger">
+                          {" "}
+                          28.76% <i className="mdi mdi-arrow-down"></i>
+                        </td>
+                        <td>
+                          <label className="badge badge-danger">Pending</label>
+                        </td>
                       </tr>
                       <tr>
                         <td>Messsy</td>
                         <td>Flash</td>
-                        <td className="text-danger"> 21.06% <i className="mdi mdi-arrow-down"></i></td>
-                        <td><label className="badge badge-warning">In progress</label></td>
+                        <td className="text-danger">
+                          {" "}
+                          21.06% <i className="mdi mdi-arrow-down"></i>
+                        </td>
+                        <td>
+                          <label className="badge badge-warning">
+                            In progress
+                          </label>
+                        </td>
                       </tr>
                       <tr>
                         <td>John</td>
                         <td>Premier</td>
-                        <td className="text-danger"> 35.00% <i className="mdi mdi-arrow-down"></i></td>
-                        <td><label className="badge badge-info">Fixed</label></td>
+                        <td className="text-danger">
+                          {" "}
+                          35.00% <i className="mdi mdi-arrow-down"></i>
+                        </td>
+                        <td>
+                          <label className="badge badge-info">Fixed</label>
+                        </td>
                       </tr>
                       <tr>
                         <td>Peter</td>
                         <td>After effects</td>
-                        <td className="text-success"> 82.00% <i className="mdi mdi-arrow-up"></i></td>
-                        <td><label className="badge badge-success">Completed</label></td>
+                        <td className="text-success">
+                          {" "}
+                          82.00% <i className="mdi mdi-arrow-up"></i>
+                        </td>
+                        <td>
+                          <label className="badge badge-success">
+                            Completed
+                          </label>
+                        </td>
                       </tr>
                       <tr>
                         <td>Dave</td>
                         <td>53275535</td>
-                        <td className="text-success"> 98.05% <i className="mdi mdi-arrow-up"></i></td>
-                        <td><label className="badge badge-warning">In progress</label></td>
+                        <td className="text-success">
+                          {" "}
+                          98.05% <i className="mdi mdi-arrow-up"></i>
+                        </td>
+                        <td>
+                          <label className="badge badge-warning">
+                            In progress
+                          </label>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -125,7 +182,9 @@ export class BasicTable extends Component {
             <div className="card">
               <div className="card-body">
                 <h4 className="card-title">Striped Table</h4>
-                <p className="card-description"> Add className <code>.table-striped</code>
+                <p className="card-description">
+                  {" "}
+                  Add className <code>.table-striped</code>
                 </p>
                 <div className="table-responsive">
                   <table className="table table-striped">
@@ -141,7 +200,10 @@ export class BasicTable extends Component {
                     <tbody>
                       <tr>
                         <td className="py-1">
-                          <img src={require("../../assets/images/faces/face1.jpg")} alt="user icon" />
+                          <img
+                            src={require("../../assets/images/faces/face1.jpg")}
+                            alt="user icon"
+                          />
                         </td>
                         <td> Herman Beck </td>
                         <td>
@@ -152,7 +214,10 @@ export class BasicTable extends Component {
                       </tr>
                       <tr>
                         <td className="py-1">
-                          <img src={require("../../assets/images/faces/face2.jpg")} alt="user icon" />
+                          <img
+                            src={require("../../assets/images/faces/face2.jpg")}
+                            alt="user icon"
+                          />
                         </td>
                         <td> Messsy Adam </td>
                         <td>
@@ -163,7 +228,10 @@ export class BasicTable extends Component {
                       </tr>
                       <tr>
                         <td className="py-1">
-                          <img src={require("../../assets/images/faces/face3.jpg")} alt="user icon" />
+                          <img
+                            src={require("../../assets/images/faces/face3.jpg")}
+                            alt="user icon"
+                          />
                         </td>
                         <td> John Richards </td>
                         <td>
@@ -174,7 +242,10 @@ export class BasicTable extends Component {
                       </tr>
                       <tr>
                         <td className="py-1">
-                          <img src={require("../../assets/images/faces/face4.jpg")} alt="user icon" />
+                          <img
+                            src={require("../../assets/images/faces/face4.jpg")}
+                            alt="user icon"
+                          />
                         </td>
                         <td> Peter Meggik </td>
                         <td>
@@ -185,7 +256,10 @@ export class BasicTable extends Component {
                       </tr>
                       <tr>
                         <td className="py-1">
-                          <img src={require("../../assets/images/faces/face5.jpg")} alt="user icon" />
+                          <img
+                            src={require("../../assets/images/faces/face5.jpg")}
+                            alt="user icon"
+                          />
                         </td>
                         <td> Edward </td>
                         <td>
@@ -196,7 +270,10 @@ export class BasicTable extends Component {
                       </tr>
                       <tr>
                         <td className="py-1">
-                          <img src={require("../../assets/images/faces/face6.jpg")} alt="user icon" />
+                          <img
+                            src={require("../../assets/images/faces/face6.jpg")}
+                            alt="user icon"
+                          />
                         </td>
                         <td> John Doe </td>
                         <td>
@@ -207,7 +284,10 @@ export class BasicTable extends Component {
                       </tr>
                       <tr>
                         <td className="py-1">
-                          <img src={require("../../assets/images/faces/face7.jpg")} alt="user icon" />
+                          <img
+                            src={require("../../assets/images/faces/face7.jpg")}
+                            alt="user icon"
+                          />
                         </td>
                         <td> Henry Tom </td>
                         <td>
@@ -226,7 +306,9 @@ export class BasicTable extends Component {
             <div className="card">
               <div className="card-body">
                 <h4 className="card-title">Bordered table</h4>
-                <p className="card-description"> Add className <code>.table-bordered</code>
+                <p className="card-description">
+                  {" "}
+                  Add className <code>.table-bordered</code>
                 </p>
                 <div className="table-responsive">
                   <table className="table table-bordered">
@@ -298,7 +380,7 @@ export class BasicTable extends Component {
                         <td> 7 </td>
                         <td> Henry Tom </td>
                         <td>
-                        <ProgressBar now={60} />
+                          <ProgressBar now={60} />
                           <ProgressBar variant="warning" now={20} />
                         </td>
                         <td> $ 150.00 </td>
@@ -314,7 +396,9 @@ export class BasicTable extends Component {
             <div className="card">
               <div className="card-body">
                 <h4 className="card-title">Inverse table</h4>
-                <p className="card-description"> Add className <code>.table-dark</code>
+                <p className="card-description">
+                  {" "}
+                  Add className <code>.table-dark</code>
                 </p>
                 <div className="table-responsive">
                   <table className="table table-dark">
@@ -379,7 +463,9 @@ export class BasicTable extends Component {
             <div className="card">
               <div className="card-body">
                 <h4 className="card-title">Table with contextual classNames</h4>
-                <p className="card-description"> Add className <code>.table-&#123;color&#125;</code>
+                <p className="card-description">
+                  {" "}
+                  Add className <code>.table-&#123;color&#125;</code>
                 </p>
                 <div className="table-responsive">
                   <table className="table table-bordered">
@@ -436,8 +522,8 @@ export class BasicTable extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default BasicTable
+export default BasicTable;
