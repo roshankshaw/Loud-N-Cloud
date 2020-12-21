@@ -21,7 +21,6 @@ class RenderMap extends Component {
       .then(async function (files) {
         let topoMain = files[0];
         let topoKashmir = files[1];
-        console.log(topoMain)
         var districts;
         var disputed;
         // if (error) throw error;

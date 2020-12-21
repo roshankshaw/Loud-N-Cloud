@@ -28,7 +28,7 @@ function updateCases(districts, data) {
             // vaccines will be decided by total population
             // Literacy decides vaccines required
             let population = data[districtId].Population; // this will be replaced by total population
-            console.log(data[districtId].Population)
+            // console.log(data[districtId].Population)
             let deceased = data[districtId].deceased;
             let recoveredCases = data[districtId].recovered;
             let totalVaccines = population - (recoveredCases + deceased)
@@ -49,9 +49,6 @@ function updateCases(districts, data) {
             literacy.FemaleLiteracy = new Array (0, 0);
         }
     }
-
-    console.log(max_Vac)
-            console.log(min_Vac)
 
 }
 

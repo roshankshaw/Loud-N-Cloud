@@ -38,7 +38,6 @@ class PopRenderMap extends Component {
         // var filter = await d3.select('#select input[name="gender"]:checked').node().value;
         var filter= "Literacy";
         let curstate=newProps.state.currentState;
-        console.log(curstate);
         let apiparam="{";
         for (let key of Object.keys(curstate)) {
           if(key=='population'&&curstate.population=="high")
@@ -60,7 +59,6 @@ class PopRenderMap extends Component {
         }
         else{
           let api="https://project-manna-backend.herokuapp.com/getRowsSortByCol/"+apiparam;
-          console.log(api);
           let data = await axios.get(api).then(response => response.data).then(data => {
             return data;
           });
