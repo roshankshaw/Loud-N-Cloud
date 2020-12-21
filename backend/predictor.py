@@ -379,29 +379,29 @@ finalDf['Relative Vaccination Priority'] = finalDf['Normalized Vaccination Prior
 # In[15]:
 
 
-binaryColumns=[
- 'Active Cases Predicted',
- 'Population',
- 'Susceptibles',
- 'active',
- 'confirmed',
- 'deceased',
- 'recovered',
- 'New Active Cases Predicted',
- 'Normalized Risk',
- 'Log Risk',
- 'Normalized Log Risk',
- 'Vaccination Priority',
- 'Normalized Vaccination Priority',
- 'Normalized active',
- 'Normalized confirmed',
- 'Normalized recovered',
- 'Normalized deceased',
- 'Relative Vaccination Priority']
+# binaryColumns=[
+#  'Active Cases Predicted',
+#  'Population',
+#  'Susceptibles',
+#  'active',
+#  'confirmed',
+#  'deceased',
+#  'recovered',
+#  'New Active Cases Predicted',
+#  'Normalized Risk',
+#  'Log Risk',
+#  'Normalized Log Risk',
+#  'Vaccination Priority',
+#  'Normalized Vaccination Priority',
+#  'Normalized active',
+#  'Normalized confirmed',
+#  'Normalized recovered',
+#  'Normalized deceased',
+#  'Relative Vaccination Priority']
 
-for col in binaryColumns:
-    mean, _ = scipy.stats.distributions.norm.fit(finalDf[col])
-    finalDf[f'Binary {col}']=(finalDf[col] > mean).astype(int)
+# for col in binaryColumns:
+#     mean, _ = scipy.stats.distributions.norm.fit(finalDf[col])
+#     finalDf[f'Binary {col}']=(finalDf[col] > mean).astype(int)
 
 
 # In[16]:
