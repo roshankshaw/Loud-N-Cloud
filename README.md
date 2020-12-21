@@ -3,9 +3,34 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# Loud-N-Cloud
-InOut 2020 Submission
+# project-manna
+Submitted at InOut 2020. This project has been deployed on heroku, and can be accessed from this link. [project-manna](https://project-manna.herokuapp.com/)
 
+## Motivation
+Vaccine for Covid-19 has been developed in record time. Now, the next big challenge is a logistical one, manufacturing vaccine at scale and mass innoculation. It will be some time before everyone is vaccinated. So we need to make the best out of the limited supply we will be getting initially. By predicting vunerable demographics beforehand, we can vaccinate these people on a priority basis to decrease fatality rate.
+
+## How our model works
+We have collected the data from covid19india.org, who are doing an awesome job at crowdsourcing the data!
+![backend](https://cdn.discordapp.com/attachments/772028017047764996/790485882834518056/Inout.png)
+The SIR model we devised was inspired from this project [infectious_disease_modelling](https://github.com/henrifroese/infectious_disease_modelling)
+We have used the star admin react template for our dashboard.
+
+## Tech stack
+<p align = "center">
+  <img src="https://img.shields.io/badge/Python%20-%23FF9900.svg?&style=for-the-badge&logo=python&logoColor=white"/> 
+  <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/python%20-%2314354C.svg?&style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+  <img src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
+  <img src="https://img.shields.io/badge/flask%20-%23092E20.svg?&style=for-the-badge&logo=flask&logoColor=white"/>
+  <img src="https://img.shields.io/badge/heroku%20-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white"/>
+</p>
+
+## Features
+- [x] General statistics- Active | Confirmed | Recovered cases
+- [x] District wise risk classification
+- [x] Estimated required vaccines per million people to mitigate fatality
 
 ## Starware
 
