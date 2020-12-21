@@ -13,7 +13,7 @@
         }
       }
     }
-    .sidebar { 
+    .sidebar {
       width: $sidebar-width-mini;
       .nav {
         .sidebar-category {
@@ -54,7 +54,6 @@
             }
           }
         }
-    
       }
     }
 
@@ -256,10 +255,14 @@
       }
     }
     .page-body-wrapper {
-      transition: all $action-transition-duration $action-transition-timing-function;
-      -webkit-transition: all $action-transition-duration $action-transition-timing-function;
-      -moz-transition: all $action-transition-duration $action-transition-timing-function;
-      -ms-transition: all $action-transition-duration $action-transition-timing-function;
+      transition: all $action-transition-duration
+        $action-transition-timing-function;
+      -webkit-transition: all $action-transition-duration
+        $action-transition-timing-function;
+      -moz-transition: all $action-transition-duration
+        $action-transition-timing-function;
+      -ms-transition: all $action-transition-duration
+        $action-transition-timing-function;
     }
     .main-panel {
       width: 100%;
@@ -384,18 +387,26 @@
     }
   }
   .page-body-wrapper {
-    transition: all $action-transition-duration $action-transition-timing-function;
-    -webkit-transition: all $action-transition-duration $action-transition-timing-function;
-    -moz-transition: all $action-transition-duration $action-transition-timing-function;
-    -ms-transition: all $action-transition-duration $action-transition-timing-function;
+    transition: all $action-transition-duration
+      $action-transition-timing-function;
+    -webkit-transition: all $action-transition-duration
+      $action-transition-timing-function;
+    -moz-transition: all $action-transition-duration
+      $action-transition-timing-function;
+    -ms-transition: all $action-transition-duration
+      $action-transition-timing-function;
   }
   .navbar {
-    transition: all $action-transition-duration $action-transition-timing-function;
-    -webkit-transition: all $action-transition-duration $action-transition-timing-function;
-    -moz-transition: all $action-transition-duration $action-transition-timing-function;
-    -ms-transition: all $action-transition-duration $action-transition-timing-function;
+    transition: all $action-transition-duration
+      $action-transition-timing-function;
+    -webkit-transition: all $action-transition-duration
+      $action-transition-timing-function;
+    -moz-transition: all $action-transition-duration
+      $action-transition-timing-function;
+    -ms-transition: all $action-transition-duration
+      $action-transition-timing-function;
     right: $sidebar-width-lg;
-    @media (max-width:900px) {
+    @media (max-width: 900px) {
       right: 0;
     }
   }
@@ -419,8 +430,8 @@
   }
   &.sidebar-icon-only {
     .navbar {
-    right: $sidebar-width-icon;
-    left: 0;
+      right: $sidebar-width-icon;
+      left: 0;
     }
     &.rtl {
       .sidebar {

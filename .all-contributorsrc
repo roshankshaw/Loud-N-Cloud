@@ -1,0 +1,63 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "DesignrKnight",
+      "name": "Abel Mathew",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/27865704?v=4",
+      "profile": "https://github.com/DesignrKnight",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "roshankshaw",
+      "name": "Roshan Kumar Shaw",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/31109201?v=4",
+      "profile": "https://github.com/roshankshaw",
+      "contributions": [
+        "code",
+        "design"
+      ]
+    },
+    {
+      "login": "harshsri2208",
+      "name": "Harsh Srivastava",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/37096649?v=4",
+      "profile": "http://harshsri2208.github.io",
+      "contributions": [
+        "code",
+        "design"
+      ]
+    },
+    {
+      "login": "Chinmay-KB",
+      "name": "Chinmay Kabi",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/13520364?v=4",
+      "profile": "https://github.com/Chinmay-KB",
+      "contributions": [
+        "code",
+        "content"
+      ]
+    },
+    {
+      "login": "sayan1999",
+      "name": "Sayan Dey",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/42580224?v=4",
+      "profile": "https://sayan1999.github.io/",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "Loud-N-Cloud",
+  "projectOwner": "DesignrKnight",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

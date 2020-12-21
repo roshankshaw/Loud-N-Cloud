@@ -1,7 +1,7 @@
-import React from 'react';
-import RenderMap from './../maps/clusterMap';
-import './../../assets/css/literacyMap.css';
-import mapKey from './../../assets/images/mapkeys/lowtohigh.jpg';
+import React from "react";
+import RenderMap from "./../maps/clusterMap";
+import "./../../assets/css/literacyMap.css";
+import mapKey from "./../../assets/images/mapkeys/lowtohigh.jpg";
 
 const Dashboard3 = () => (
   <div className="content">
@@ -11,7 +11,7 @@ const Dashboard3 = () => (
           <RenderMap />
         </div>
         <div className="col-md-20">
-            <img src={mapKey}/>
+          <img src={mapKey} />
         </div>
       </div>
       {/* <div className="row">
@@ -22,7 +22,6 @@ const Dashboard3 = () => (
           <Tasks />
         </div>
       </div> */}
-
     </div>
   </div>
 );

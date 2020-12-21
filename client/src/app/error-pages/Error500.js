@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export class Error500 extends Component {
   render() {
@@ -19,15 +19,20 @@ export class Error500 extends Component {
               </div>
               <div className="row mt-5">
                 <div className="col-12 text-center mt-xl-2">
-                  <Link className="text-white font-weight-medium" to="/dashboard">Back to home</Link>
+                  <Link
+                    className="text-white font-weight-medium"
+                    to="/dashboard"
+                  >
+                    Back to home
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
-        </div>  
+        </div>
       </div>
-    )
+    );
   }
 }
 
-export default Error500
+export default Error500;

@@ -21,7 +21,7 @@ dl {
       font-family: "Material Design Icons";
       margin-left: -1.5rem;
       width: 1.5rem;
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
   }
 }
@@ -29,7 +29,7 @@ dl {
 .list-ticked {
   li {
     &:before {
-      content: '\F12D';
+      content: "\F12D";
       color: theme-color(danger);
     }
   }
@@ -38,7 +38,7 @@ dl {
 .list-arrow {
   li {
     &:before {
-      content: '\F142';
+      content: "\F142";
       color: theme-color(success);
     }
   }
@@ -47,7 +47,7 @@ dl {
 .list-star {
   li {
     &:before {
-      content: '\F4CE';
+      content: "\F4CE";
       color: theme-color(warning);
     }
   }
@@ -121,7 +121,7 @@ dl {
     line-height: 1;
     &:before,
     &:after {
-      content:"";
+      content: "";
       position: absolute;
     }
     &:before {
@@ -148,10 +148,10 @@ dl {
     top: 64px;
     bottom: 113px;
     left: 36px;
-    @media (max-width:768px) {
+    @media (max-width: 768px) {
       bottom: 100px;
     }
-    @media (max-width:576px) {
+    @media (max-width: 576px) {
       bottom: 113px;
     }
   }

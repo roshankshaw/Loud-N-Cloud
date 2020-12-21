@@ -7,10 +7,18 @@
   padding: 0;
   width: $sidebar-width-lg;
   z-index: 11;
-  transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
-  -webkit-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
-  -moz-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
-  -ms-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+  transition: width $action-transition-duration
+      $action-transition-timing-function,
+    background $action-transition-duration $action-transition-timing-function;
+  -webkit-transition: width $action-transition-duration
+      $action-transition-timing-function,
+    background $action-transition-duration $action-transition-timing-function;
+  -moz-transition: width $action-transition-duration
+      $action-transition-timing-function,
+    background $action-transition-duration $action-transition-timing-function;
+  -ms-transition: width $action-transition-duration
+      $action-transition-timing-function,
+    background $action-transition-duration $action-transition-timing-function;
   .sidebar-brand-wrapper {
     width: auto;
     height: $navbar-height;
@@ -44,7 +52,7 @@
       }
     }
   }
-  >.nav {
+  > .nav {
     overflow: hidden;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -66,7 +74,7 @@
           display: block;
           max-width: 100%;
           .nav-link {
-            padding: 10px 0px 10px 70px; 
+            padding: 10px 0px 10px 70px;
             position: relative;
             color: rgba($sidebar-light-menu-color, 0.8);
             font-size: calc(#{$sidebar-menu-font-size} - 2px);
@@ -153,7 +161,6 @@
         }
 
         &[aria-expanded="true"] {
-
           i {
             &.menu-arrow {
               transform: rotate(90deg);
@@ -194,7 +201,7 @@
       }
 
       &.active {
-        >.nav-link {
+        > .nav-link {
           color: $sidebar-light-menu-active-color;
 
           .menu-title,
@@ -260,14 +267,14 @@
       }
     }
 
-    >.nav-item {
-      >.nav-link {
+    > .nav-item {
+      > .nav-link {
         height: $nav-link-height;
       }
     }
 
-    >.nav-item:not(.nav-profile) {
-      >.nav-link {
+    > .nav-item:not(.nav-profile) {
+      > .nav-link {
         position: relative;
 
         &:before {
@@ -290,8 +297,8 @@
     }
 
     &:not(.sub-menu) {
-      >.nav-item {
-        >.nav-link {
+      > .nav-item {
+        > .nav-link {
           background: transparent;
           transition-duration: 0.3s;
           transition-timing-function: "ease-in-out";
@@ -300,7 +307,7 @@
 
         &:hover {
           &:not(.nav-profile):not(.hover-open) {
-            >.nav-link:not([aria-expanded="true"]) {
+            > .nav-link:not([aria-expanded="true"]) {
               background: $sidebar-light-menu-hover-bg;
               padding-left: 65px;
 

@@ -1,7 +1,7 @@
 /* Badges */
 
 .badge {
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   font-size: 11px;
   line-height: 1;
   padding: 4px 6px;
@@ -9,10 +9,9 @@
   font-weight: 600;
   letter-spacing: 0.04rem;
   &.badge-pill {
-    border-radius: 10rem; 
+    border-radius: 10rem;
   }
 }
-
 
 /*Badge variations*/
 @each $color, $value in $theme-colors {
@@ -20,7 +19,6 @@
     @include badge-variations($value);
   }
 }
-
 
 /*Badge outlined variations*/
 @each $color, $value in $theme-colors {
@@ -30,8 +28,7 @@
 }
 /*Badge inverse variations*/
 
-@each $color,
-$value in $theme-colors {
+@each $color, $value in $theme-colors {
   .badge-inverse-#{$color} {
     @include badge-inverse-variations($value);
   }

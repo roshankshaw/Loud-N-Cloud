@@ -171,7 +171,7 @@
 
 .btn-toolbar {
   .btn-group {
-    +.btn-group {
+    + .btn-group {
       @extend .ml-2;
     }
   }
@@ -179,8 +179,7 @@
 
 /*social buttons*/
 
-@each $color,
-$value in $social-colors {
+@each $color, $value in $social-colors {
   .btn-#{$color} {
     @include social-button(social-color($color));
   }
@@ -188,8 +187,7 @@ $value in $social-colors {
 
 /*social buttons*/
 
-@each $color,
-$value in $social-colors {
+@each $color, $value in $social-colors {
   .btn-social-outline-#{$color} {
     @include btn-social-outline-variant(social-color($color));
   }
@@ -197,8 +195,7 @@ $value in $social-colors {
 
 /* inverse buttons */
 
-@each $color,
-$value in $theme-colors {
+@each $color, $value in $theme-colors {
   .btn-inverse-#{$color} {
     @include button-inverse-variant($value);
   }
@@ -206,8 +203,7 @@ $value in $theme-colors {
 
 /* Inverse Outlined Buttons */
 
-@each $color,
-$value in $theme-colors {
+@each $color, $value in $theme-colors {
   .btn-inverse-outline-#{$color} {
     @include button-inverse-outline-variant($value);
   }

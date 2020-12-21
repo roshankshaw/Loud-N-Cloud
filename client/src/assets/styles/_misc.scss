@@ -28,7 +28,7 @@ body {
     .main-panel {
       width: 100%;
       transition: none;
-      margin-top:-$navbar-height;
+      margin-top: -$navbar-height;
       .content-wrapper {
         padding: 0;
         > div {
@@ -40,7 +40,9 @@ body {
 }
 
 .main-panel {
-  transition: width $action-transition-duration $action-transition-timing-function, margin $action-transition-duration $action-transition-timing-function;
+  transition: width $action-transition-duration
+      $action-transition-timing-function,
+    margin $action-transition-duration $action-transition-timing-function;
   width: calc(100% - #{$sidebar-width-lg});
   min-height: calc(100vh - #{$navbar-height});
   padding-top: $navbar-height;
@@ -88,7 +90,7 @@ code {
   display: flex;
   @extend .justify-content-between;
   @extend .align-items-center;
-  margin: 0 0 1.5rem 0; 
+  margin: 0 0 1.5rem 0;
 
   @media (min-width: 768px) {
     display: block;
@@ -110,7 +112,7 @@ code {
     text-align: center;
     box-shadow: 0px 3px 8.3px 0.7px rgba(163, 93, 255, 0.35);
     i {
-      font-size: .9375rem;
+      font-size: 0.9375rem;
       line-height: 36px;
     }
   }
@@ -118,7 +120,7 @@ code {
 .dropdown-toggle {
   &.hide-carret {
     &:after {
-      content: '';
+      content: "";
       display: none;
     }
   }
@@ -126,7 +128,6 @@ code {
 
 .bg-transparent {
   background: transparent;
-  
 }
 @each $color, $value in $social-colors {
   .text-#{$color} {
@@ -141,7 +142,7 @@ code {
   margin-bottom: 15px;
 
   @media (max-width: 992px) {
-      display: inline-block;
+    display: inline-block;
   }
 }
 
@@ -150,7 +151,7 @@ code {
   margin-bottom: 2px;
 
   @media (max-width: 992px) {
-      margin-botttom: 15px;
+    margin-botttom: 15px;
   }
 }
 .quick-links {
@@ -162,29 +163,29 @@ code {
   padding-left: 0;
 
   @media (min-width: 992px) {
-      padding-left: 10px;
+    padding-left: 10px;
   }
 
   li {
-      margin-right: 10px;
-      border-right: 1px solid $body-color;
-      line-height: 1;
+    margin-right: 10px;
+    border-right: 1px solid $body-color;
+    line-height: 1;
+
+    a {
+      display: inline-block;
+      color: $body-color;
+      text-decoration: none;
+      padding-right: 10px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      border-right: none;
 
       a {
-          display: inline-block;
-          color: $body-color;
-          text-decoration: none;
-          padding-right: 10px;
+        padding-right: 0;
       }
-
-      &:last-child {
-          margin-right: 0;
-          border-right: none;
-
-          a {
-              padding-right: 0;
-          }
-      }
+    }
   }
 }
 .page-title-header {
@@ -197,27 +198,27 @@ code {
   width: 100%;
 
   @media (max-width: 992px) {
-      display: inline-block;
+    display: inline-block;
 
-      .toolbar-item {
-          margin-top: 20px;
-      }
+    .toolbar-item {
+      margin-top: 20px;
+    }
   }
 
   .btn-group,
   .btn {
-      border: none;
+    border: none;
 
-      i {
-          font-size: 1.24rem;
-          color: $page-header-toolbar-btn-color;
-      }
+    i {
+      font-size: 1.24rem;
+      color: $page-header-toolbar-btn-color;
+    }
 
-      &.dropdown-toggle {
-          &:after {
-              color: $page-header-toolbar-btn-color;
-          }
+    &.dropdown-toggle {
+      &:after {
+        color: $page-header-toolbar-btn-color;
       }
+    }
   }
 }
 
@@ -229,7 +230,7 @@ code {
   }
 
   @media (max-width: 992px) {
-      margin-left: 0;
+    margin-left: 0;
   }
 }
 
@@ -238,7 +239,7 @@ code {
   width: 46%;
 
   @media (max-width: 992px) {
-      width: 100%;
+    width: 100%;
   }
 }
 

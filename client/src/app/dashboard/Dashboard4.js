@@ -1,6 +1,6 @@
-import React from 'react';
-import RenderMap from '../maps/casesMap';
-import './../../assets/css/literacyMap.css';
+import React from "react";
+import RenderMap from "../maps/casesMap";
+import "./../../assets/css/literacyMap.css";
 
 const Dashboard4 = () => (
   <div className="content">
@@ -21,7 +21,6 @@ const Dashboard4 = () => (
           <Tasks />
         </div>
       </div> */}
-
     </div>
   </div>
 );
