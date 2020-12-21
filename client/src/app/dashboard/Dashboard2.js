@@ -75,7 +75,7 @@ class Dashboard2 extends React.Component{
         key={i}
         id={`dropdowna`}
       >
-        <Dropdown.Item eventKey="2" id= {title} onClick={this.handleClick} active>Medium</Dropdown.Item>
+        <Dropdown.Item eventKey="2" id= {title} onClick={this.handleClick} active>Default</Dropdown.Item>
         <Dropdown.Item eventKey="1" id= {title}   onClick={this.handleClick}>High</Dropdown.Item>
         <Dropdown.Item eventKey="3" id= {title}  onClick={this.handleClick}>Low</Dropdown.Item>
       </DropdownButton>
@@ -86,7 +86,7 @@ class Dashboard2 extends React.Component{
     <div className="content">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-7">
             <RenderMap state={this.state} />
           </div>
           <div className="col-md-4">

@@ -2,7 +2,7 @@ function updateFilter(districts, data) {
 
     let district = districts.features;
     let numClusters = 4;
-    let top=200,itr=0;
+    let top=120,itr=0;
     for (let i = 0; i < district.length; i++) {
         let literacy = district[i].properties;
         let districtId = (district[i].id).toLowerCase();
