@@ -1,0 +1,12 @@
+scipy
+tqdm
+scikit-learn
+pandas
+numpy
+Flask
+flask_cors
+mpld3
+scipy
+lmfit
+gunicorn
+ipython

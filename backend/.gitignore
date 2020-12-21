@@ -1,0 +1,9 @@
+*.ipynb
+.ipynb_checkpoints
+.vscode
+env/
+*/__pycache__/*
+database/*
+intermediate.xlsx
+results.xlsx
+covid.xlsx
