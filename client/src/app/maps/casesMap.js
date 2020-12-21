@@ -6,19 +6,20 @@ import axios from "axios";
 //import require from 'requirejs'
 
 class RenderMap extends Component {
-  componentDidMount() {
+  async componentDidMount() {
     // d3Q.queue()
     //   .defer(d3.json, "../data/IND_adm2_Literacy.json")
     //   .defer(d3.json, "../data/ne_10m_admin_0_Kashmir_Occupied.json")
     //   .await(function (error, topoMain, topoKashmir) {
-    Promise.all([
+    const files = await Promise.all([
       d3.json(
         "https://raw.githubusercontent.com/akshat-khare/datavisproject/master/IND_adm2_Literacy.json"
       ),
       d3.json(
         "https://raw.githubusercontent.com/akshat-khare/datavisproject/master/ne_10m_admin_0_Kashmir_Occupied.json"
       ),
-    ]).then(async function (files) {
+    ]); 
+    if (files) {
       let topoMain = files[0];
       let topoKashmir = files[1];
       console.log(topoMain);
@@ -72,7 +73,7 @@ class RenderMap extends Component {
           .propTag(filter);
         d3.select("#map").call(map);
       });
-    });
+    }
 
     function selectFilter() {
       function render(selection) {
